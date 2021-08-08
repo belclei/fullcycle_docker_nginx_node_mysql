@@ -16,7 +16,7 @@ function getRandomName() {
 
 app.get('/', (req,res) => {
     const connection = mysql.createConnection(config)
-    connection.query(`INSERT INTO people(name) values('==> ${getRandomName()}')`)
+    connection.query(`INSERT INTO people(name) values('${getRandomName()}')`)
     connection.query('SELECT name FROM people', (err, result) => {
         if (err) throw err;
         const nameList = result.map((value) => `<li>${value.name}</li>`).join('');
