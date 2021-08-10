@@ -13,3 +13,5 @@ EXPOSE 3000
 
 COPY . .
 RUN npm install -g npm@7.14.0 && npm install
+
+CMD [ "node", "index.js" ]
