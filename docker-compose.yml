@@ -20,7 +20,7 @@ services:
     networks:
       - nodenet
     volumes:
-      #- /usr/src/app/node_modules
+      - /usr/src/app/node_modules
       - ./node:/usr/src/app
     tty: true
     ports:

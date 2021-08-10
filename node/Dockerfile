@@ -12,4 +12,4 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 EXPOSE 3000
 
 COPY . .
-RUN npm install
+RUN npm install -g npm@7.14.0 && npm install
